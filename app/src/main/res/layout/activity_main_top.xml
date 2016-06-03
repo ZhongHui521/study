@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45sp"
+    android:orientation="horizontal"
+    android:background="#ff2cc17b"
+    android:id="@+id/top_linearLayout"
+    >
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:src="@mipmap/ic_learncenter_morecourse_search"
+        android:layout_weight="0.8"
+        android:layout_marginLeft="20sp"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo_bg"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1.4"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:src="@mipmap/ico_course_detail_message"
+        android:layout_gravity="center_vertical"
+
+        android:layout_weight="0.8"
+        />
+</LinearLayout>
