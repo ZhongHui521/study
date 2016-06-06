@@ -4,9 +4,8 @@
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     >
-
+    <!--Radio组-->
     <RadioGroup
         android:id="@+id/main_bottom_radio_group"
         android:layout_width="match_parent"
@@ -14,6 +13,7 @@
         android:orientation="horizontal"
         android:layout_gravity="bottom"
         >
+        <!--首页-->
         <RadioButton
             android:id="@+id/main_home_radioBtn"
             android:layout_width="wrap_content"
@@ -25,6 +25,7 @@
             android:checked="true"
 
             />
+        <!--全部课程-->
         <RadioButton
             android:id="@+id/main_allcourse_radioBtn"
             android:layout_width="wrap_content"
@@ -34,6 +35,7 @@
             android:drawableTop="@drawable/bottom_allcourse"
             style="@style/tab_bottom"
             />
+        <!--学习中心-->
         <RadioButton
             android:id="@+id/main_mystudy_radioBtn"
             android:layout_width="wrap_content"
@@ -45,6 +47,7 @@
             style="@style/tab_bottom"
 
             />
+        <!--账号-->
         <RadioButton
             android:id="@+id/main_account_radioBtn"
             android:layout_width="wrap_content"

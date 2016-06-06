@@ -7,6 +7,7 @@ import android.support.v4.view.ViewPager;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
+import com.huixue.study.CycleView.CycleView;
 import com.huixue.study.adapter.MyFragmentPageAdapter;
 
 import java.util.ArrayList;
@@ -22,8 +23,8 @@ public class MainActivity extends FragmentActivity{
     private RadioButton radio_home,radio_course,radio_study,radio_account;
     //Fragment动态数组
     private ArrayList<Fragment> main_FragmentsList;
-
-
+    //轮播图自定义组件
+    private CycleView cycleView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +33,10 @@ public class MainActivity extends FragmentActivity{
 //        /*设置不显示标题栏*/
 //        ActionBar actionBar=getSupportActionBar();
 //        actionBar.hide();
-        //界面初始函数,功能是获取各控件ID
+        //开启轮播图
+
+
+//界面初始函数,功能是获取各控件ID
         InitView();
         //viewPager初始化函数
     }//onCreate over
@@ -56,6 +60,7 @@ public class MainActivity extends FragmentActivity{
                                           * false:关闭
                                           * */
                                         main_viewPager.setCurrentItem(0,false);
+
                                           break;
                                       case  R.id.main_allcourse_radioBtn:
                                             main_viewPager.setCurrentItem(1,false);
@@ -115,6 +120,10 @@ public class MainActivity extends FragmentActivity{
                                        break;
 
                                }
+//                           //如果当前选择的不是首页，销毁轮播图
+//                           if (position!=0){
+//                               cycleView.removeCallbacksAndMessages();
+//                           }
                        }
 
                        @Override
@@ -125,6 +134,5 @@ public class MainActivity extends FragmentActivity{
         );
 
     }//initView over
-
 
 }

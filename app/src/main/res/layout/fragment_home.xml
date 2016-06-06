@@ -31,15 +31,21 @@
             <LinearLayout
                 android:id="@+id/main_banaer_layout"
                 android:layout_width="match_parent"
-                android:layout_height="200sp"
+                android:layout_height="200dp"
                 android:orientation="vertical"
                 >
-                <ImageView
+                <!--<ImageView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:background="#06f"-->
+                <!--android:src="@mipmap/b1"-->
+                <!--/>-->
+                <com.huixue.study.CycleView.CycleView
+                    android:id="@+id/home_cycle_view"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="#06f"
-                    android:src="@mipmap/b1"
-                    />
+                    android:layout_height="match_parent">
+
+                </com.huixue.study.CycleView.CycleView>
             </LinearLayout>
             <!--第一行布局-->
             <LinearLayout
