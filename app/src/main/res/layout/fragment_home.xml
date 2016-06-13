@@ -18,7 +18,6 @@
         android:scrollbarStyle="outsideOverlay"
         android:scrollbars="vertical"
         android:scrollbarSize="5px"
-        android:paddingRight="20dp"
         android:visibility="visible"
 
         >
@@ -34,13 +33,6 @@
                 android:layout_height="200dp"
                 android:orientation="vertical"
                 >
-                <!--<ImageView-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="match_parent"-->
-                <!--android:background="#06f"-->
-                <!--android:src="@mipmap/b1"-->
-                <!--/>-->
-
                 <com.huixue.study.CycleView.CycleView
                     android:id="@+id/home_cycle_view"
                     android:layout_width="match_parent"
@@ -51,6 +43,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
                 android:orientation="horizontal"
                 android:background="#fff"
                 android:gravity="fill_horizontal"
@@ -59,14 +53,14 @@
                 <!--子项布局开始，每个都是一个按钮和文字1_1-->
                 <LinearLayout
                     android:layout_marginTop="5dp"
-                    android:layout_width="0sp"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
                     android:layout_weight="1"
                     >
                     <Button
-                        android:layout_width="50sp"
-                        android:layout_height="50sp"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
                         android:layout_gravity="center"
                         android:background="@mipmap/widget_ratio_front"
                         android:text="移" />
@@ -74,7 +68,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:paddingTop="5sp"
+                        android:paddingTop="5dp"
                         android:text="移动开发"
                         />
                 </LinearLayout>
@@ -149,7 +143,9 @@
             <!--第二行布局-->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="80sp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
                 android:orientation="horizontal"
                 android:weightSum="4"
                 >
@@ -252,6 +248,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
                 android:weightSum="3"
                 android:layout_marginBottom="10dp"
                 >
@@ -276,6 +274,8 @@
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
                 >
                 <RelativeLayout
                     android:layout_width="wrap_content"
@@ -319,7 +319,6 @@
                         android:src="@mipmap/triangle"
                         android:layout_centerVertical="true"
                         android:layout_toRightOf="@+id/textview_free_more"
-                        android:paddingRight="5dp"
                         />
                 </RelativeLayout>
 
@@ -327,17 +326,17 @@
             <!--下面的四张图片+文字-->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="125dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
                 android:weightSum="3"
                 android:orientation="horizontal"
-                android:layout_marginBottom="10dp"
                 >
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1.45"
                     android:orientation="vertical"
-                    android:paddingLeft="10dp"
                     >
                     <ImageView
                         android:layout_width="match_parent"
@@ -366,7 +365,6 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1.45"
                     android:orientation="vertical"
-                    android:paddingLeft="10dp"
                     >
                     <ImageView
                         android:layout_width="match_parent"
@@ -384,17 +382,17 @@
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="125dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
                 android:weightSum="3"
                 android:orientation="horizontal"
-                android:layout_marginBottom="10dp"
                 >
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1.45"
                     android:orientation="vertical"
-                    android:paddingLeft="10dp"
                     >
                     <ImageView
                         android:layout_width="match_parent"
@@ -423,7 +421,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1.45"
                     android:orientation="vertical"
-                    android:paddingLeft="10dp"
+
                     >
                     <ImageView
                         android:layout_width="match_parent"
