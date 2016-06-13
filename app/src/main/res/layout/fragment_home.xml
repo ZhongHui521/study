@@ -40,22 +40,20 @@
                 <!--android:background="#06f"-->
                 <!--android:src="@mipmap/b1"-->
                 <!--/>-->
+
                 <com.huixue.study.CycleView.CycleView
                     android:id="@+id/home_cycle_view"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
-
                 </com.huixue.study.CycleView.CycleView>
             </LinearLayout>
             <!--第一行布局-->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="80sp"
+                android:layout_height="80dp"
                 android:orientation="horizontal"
                 android:background="#fff"
-
                 android:gravity="fill_horizontal"
-
                 android:weightSum="4"
                 >
                 <!--子项布局开始，每个都是一个按钮和文字1_1-->
@@ -69,11 +67,13 @@
                     <Button
                         android:layout_width="50sp"
                         android:layout_height="50sp"
+                        android:layout_gravity="center"
                         android:background="@mipmap/widget_ratio_front"
                         android:text="移" />
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:paddingTop="5sp"
                         android:text="移动开发"
                         />
@@ -87,14 +87,16 @@
                     android:layout_weight="1"
                     >
                     <Button
-                        android:layout_width="50sp"
-                        android:layout_height="50sp"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center_horizontal"
                         android:text="测"
                         android:background="@mipmap/widget_ratio_front"
                         />
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:text="测试开发"
                         />
                 </LinearLayout>
@@ -107,14 +109,17 @@
                     android:layout_weight="1"
                     >
                     <Button
-                        android:layout_width="50sp"
-                        android:layout_height="50sp"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center_horizontal"
                         android:text="玩"
+
                         android:background="@mipmap/widget_ratio_front"
                         />
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:text="娱乐田地"
                         />
                 </LinearLayout>
@@ -122,19 +127,21 @@
                 <LinearLayout
                     android:layout_marginTop="5dp"
                     android:layout_height="match_parent"
-                    android:layout_width="0dp"                       android:orientation="vertical"
-
+                    android:layout_width="0dp"                     android:orientation="vertical"
+                    android:gravity="center"
                     android:layout_weight="1"
                     >
                     <Button
-                        android:layout_width="50sp"
-                        android:layout_height="50sp"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
                         android:background="@mipmap/widget_ratio_front"
+                        android:layout_gravity="center_horizontal"
                         android:text="学"
                         />
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:text="天天向上"
                         />
                 </LinearLayout>

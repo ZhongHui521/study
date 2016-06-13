@@ -29,12 +29,12 @@ public class CycleView extends FrameLayout {
     private ImageLoader mImageLoader;
     private List<ImageView> imageViews;
     private Context context;
-    private ViewPager vp;
+    private ViewPager banner_vp;//轮播图的viewpager
     private boolean isAutoPlay;
     private int currentItem;
     private int delayTime;
-    private LinearLayout ll_dot;
-    private List<ImageView> iv_dots;
+    private LinearLayout layoutLinearDot;//指示点的线布局
+    private List<ImageView> iv_dots; //存放圆点
     private Handler handler = new Handler();
     private DisplayImageOptions options;
 
@@ -72,17 +72,28 @@ public class CycleView extends FrameLayout {
         showTime();
     }
 
+    /**
+     * 初始化布局
+     */
     private void initLayout() {
         imageViews.clear();
+        //加载bannaer所在的布局
         View view = LayoutInflater.from(context).inflate(
                 R.layout.layout_bananer_view, this, true);
-        vp = (ViewPager) view.findViewById(R.id.vp);
-        ll_dot = (LinearLayout) view.findViewById(R.id.ll_dot);
-        ll_dot.removeAllViews();
+        //获取bannaer的viewpager
+        banner_vp = (ViewPager) view.findViewById(R.id.banaer_view_pager);
+        //指示圆点线性布局
+        layoutLinearDot = (LinearLayout) view.findViewById(R.id.layout_linear_dot);
+        layoutLinearDot.removeAllViews();
     }
 
+    /**
+     * 初始化图片，通过设置本地图片
+     * @param imagesRes
+     */
     private void initImgFromRes(int[] imagesRes) {
         count = imagesRes.length;
+        //动态创建存放指示圆点的布局
         for (int i = 0; i < count; i++) {
             ImageView iv_dot = new ImageView(context);
             LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
@@ -91,9 +102,11 @@ public class CycleView extends FrameLayout {
             params.leftMargin = 5;
             params.rightMargin = 5;
             iv_dot.setImageResource(R.drawable.dot_blur);
-            ll_dot.addView(iv_dot, params);
+            //调用addview增加iv_dot到一个线性布局
+            layoutLinearDot.addView(iv_dot, params);
             iv_dots.add(iv_dot);
         }
+        //默认第一个获得焦点
         iv_dots.get(0).setImageResource(R.drawable.dot_focus);
 
         for (int i = 0; i <= count + 1; i++) {
@@ -111,6 +124,10 @@ public class CycleView extends FrameLayout {
         }
     }
 
+    /**
+     * 通过网络获取图片
+     * @param imagesUrl
+     */
     private void initImgFromNet(String[] imagesUrl) {
         count = imagesUrl.length;
         for (int i = 0; i < count; i++) {
@@ -121,7 +138,7 @@ public class CycleView extends FrameLayout {
             params.leftMargin = 5;
             params.rightMargin = 5;
             iv_dot.setImageResource(R.drawable.dot_blur);
-            ll_dot.addView(iv_dot, params);
+            layoutLinearDot.addView(iv_dot, params);
             iv_dots.add(iv_dot);
         }
         iv_dots.get(0).setImageResource(R.drawable.dot_focus);
@@ -142,17 +159,17 @@ public class CycleView extends FrameLayout {
     }
 
     private void showTime() {
-        vp.setAdapter(new KannerPagerAdapter());
-        vp.setFocusable(true);
-        vp.setCurrentItem(1);
+        banner_vp.setAdapter(new KannerPagerAdapter());
+        banner_vp.setFocusable(true);
+        banner_vp.setCurrentItem(1);
         currentItem = 1;
-        vp.addOnPageChangeListener(new MyOnPageChangeListener());
+        banner_vp.addOnPageChangeListener(new MyOnPageChangeListener());
         startPlay();
     }
 
     private void startPlay() {
         isAutoPlay = true;
-        handler.postDelayed(task, 2000);
+        handler.postDelayed(task, 1000);//yuan 2000
     }
 
     public void initImageLoader(Context context) {
@@ -177,10 +194,10 @@ public class CycleView extends FrameLayout {
             if (isAutoPlay) {
                 currentItem = currentItem % (count + 1) + 1;
                 if (currentItem == 1) {
-                    vp.setCurrentItem(currentItem, false);
+                    banner_vp.setCurrentItem(currentItem, false);
                     handler.post(task);
                 } else {
-                    vp.setCurrentItem(currentItem);
+                    banner_vp.setCurrentItem(currentItem);
                     handler.postDelayed(task, 3000);
                 }
             } else {
@@ -226,12 +243,12 @@ public class CycleView extends FrameLayout {
                     isAutoPlay = true;
                     break;
                 case 0:
-                    if (vp.getCurrentItem() == 0) {
-                        vp.setCurrentItem(count, false);
-                    } else if (vp.getCurrentItem() == count + 1) {
-                        vp.setCurrentItem(1, false);
+                    if (banner_vp.getCurrentItem() == 0) {
+                        banner_vp.setCurrentItem(count, false);
+                    } else if (banner_vp.getCurrentItem() == count + 1) {
+                        banner_vp.setCurrentItem(1, false);
                     }
-                    currentItem = vp.getCurrentItem();
+                    currentItem = banner_vp.getCurrentItem();
                     isAutoPlay = true;
                     break;
             }

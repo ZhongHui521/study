@@ -2,14 +2,12 @@
 <merge xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
     <android.support.v4.view.ViewPager
-        android:id="@+id/vp"
+        android:id="@+id/banaer_view_pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
-
     <LinearLayout
-        android:id="@+id/ll_dot"
+        android:id="@+id/layout_linear_dot"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
@@ -18,13 +16,13 @@
         android:padding="8dp">
 
         <View
-            android:id="@+id/v_dot1"
+            android:id="@+id/v_dot_focus"
             android:layout_width="8dp"
             android:layout_height="8dp"
             android:background="@drawable/dot_focus" />
 
         <View
-            android:id="@+id/v_dot2"
+            android:id="@+id/v_dot_unfocus"
             android:layout_width="8dp"
             android:layout_height="8dp"
             android:layout_marginLeft="5dp"
