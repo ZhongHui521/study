@@ -72,19 +72,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:background="#d2d4d6"
+        android:orientation="horizontal"
+        android:background="#e2e4e7"
         >
         <!--标题栏-->
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
+            android:layout_height="50dp"
             >
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
+                android:layout_centerVertical="true"
                 android:gravity="center_vertical"
                 >
                  <TextView
@@ -93,7 +93,7 @@
                     android:text="IT互联网"
                     android:paddingLeft="10dp"
                     android:gravity="center_vertical|bottom"
-                    android:textSize="28sp"
+                    android:textSize="20sp"
                     />
                     <TextView
                     android:layout_width="wrap_content"
@@ -101,25 +101,37 @@
                     android:text="IT INTERNET"
                     android:paddingLeft="10dp"
                     android:gravity="center_vertical|bottom"
-                    android:textSize="16sp"
+                    android:textSize="12sp"
                     />
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity=""
-                    >
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="right"
-                        android:src="@mipmap/course_cate_hlw"
-                        />
-                </LinearLayout>
-
-
-
-
             </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal"
+                android:layout_marginRight="15dp"
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:src="@mipmap/course_cate_hlw"
+                    />
+            </LinearLayout>
+        </RelativeLayout>
+        <!--互联网下的内容布局-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <GridView
+                android:id="@+id/grid_view_course"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:numColumns="3"
+                android:gravity="center_vertical"
+                />
         </LinearLayout>
 
     </LinearLayout>
