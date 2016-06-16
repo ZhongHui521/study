@@ -1,6 +1,8 @@
 package com.huixue.study;
 
-import android.content.Context;import android.os.Bundle;
+import android.content.Context;
+import android.graphics.Color;
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.huixue.study.adapter.ItemCourse;
@@ -20,6 +23,7 @@ import java.util.ArrayList;
  *全部课程的Fragment
  */
 public class FragmentCourse extends Fragment{
+    private int previousSelectedPosition = -1; //初始化当前被选择的Item为-1
     private Context courseContext;
     private GridView gridView;
     private BaseAdapter courseAdapter =null;
@@ -58,6 +62,8 @@ public class FragmentCourse extends Fragment{
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int postion, long l) {
 
+
+                //吐司输出
                 Toast.makeText(courseContext,"你点击了"+(postion+1)+"项",Toast.LENGTH_SHORT).show();
             }
         });

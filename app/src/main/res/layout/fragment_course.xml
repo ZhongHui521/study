@@ -126,7 +126,7 @@
             android:layout_height="200dp"
             android:orientation="horizontal"
             android:layout_marginTop="20dp"
-            android:background="#fff"
+
             >
             <GridView
                 android:id="@+id/grid_view_course"
@@ -135,7 +135,7 @@
                 android:drawSelectorOnTop="false"
                 android:verticalSpacing="20dp"
                 android:numColumns="3"
-                android:background="@drawable/grid_item_selector"
+
                 />
         </LinearLayout>
 
