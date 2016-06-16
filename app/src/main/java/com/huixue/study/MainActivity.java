@@ -14,7 +14,6 @@ import java.util.ArrayList;
 
 
 public class MainActivity extends FragmentActivity{
-
     //viewpager 控件
     private ViewPager main_viewPager;
     //radioGroup 控件
@@ -33,7 +32,6 @@ public class MainActivity extends FragmentActivity{
 //        /*设置不显示标题栏*/
 //        ActionBar actionBar=getSupportActionBar();
 //        actionBar.hide();
-        //开启轮播图
 
 
 //界面初始函数,功能是获取各控件ID
@@ -46,6 +44,7 @@ public class MainActivity extends FragmentActivity{
         radio_course = (RadioButton)findViewById(R.id.main_allcourse_radioBtn);
         radio_study = (RadioButton)findViewById(R.id.main_mystudy_radioBtn);
         radio_account=(RadioButton)findViewById(R.id.main_account_radioBtn);
+
 
         //radiogroup监听,匿名内部类
         main_bottom_radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener(){
@@ -111,6 +110,7 @@ public class MainActivity extends FragmentActivity{
                                        break;
                                    case 1:
                                        main_bottom_radioGroup.check(R.id.main_allcourse_radioBtn);
+                                       System.out.print("binviewcccccccccc");
                                        break;
                                    case 2:
                                        main_bottom_radioGroup.check(R.id.main_mystudy_radioBtn);

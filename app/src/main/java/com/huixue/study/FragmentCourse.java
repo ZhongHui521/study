@@ -1,17 +1,17 @@
 package com.huixue.study;
 
-import android.content.Context;
-import android.os.Bundle;
+import android.content.Context;import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.Toast;
 
-import com.huixue.study.adapter.GridAdapter;
-import com.huixue.study.adapter.ItemCourseAdapter;
+import com.huixue.study.adapter.ItemCourse;
+import com.huixue.study.adapter.MyAdapter;
 
 import java.util.ArrayList;
 
@@ -21,19 +21,47 @@ import java.util.ArrayList;
  */
 public class FragmentCourse extends Fragment{
     private Context courseContext;
-    private GridView gridContenxt;
+    private GridView gridView;
     private BaseAdapter courseAdapter =null;
-    private ArrayList<ItemCourseAdapter> iData = null;//存放数据
+    private ArrayList<ItemCourse> iData = null;//存放数据
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState){
         View view = inflater.inflate(R.layout.fragment_course,container,false);
-        iData = new ArrayList<ItemCourseAdapter>();
+        //获取gridView视图
+        /**
+         * gridView
+         * */
+        gridView = (GridView)view.findViewById(R.id.grid_view_course);
+        courseContext =getActivity();
+        iData = new ArrayList<ItemCourse>();
         //给数据列表添加数据
-        iData.add(new ItemCourseAdapter(R.drawable.grid_item_lrb,"还是四个"));
-        iData.add(new ItemCourseAdapter(R.drawable.grid_item_lrb,"一直四个"));
-        iData.add(new ItemCourseAdapter(R.drawable.grid_item_lrb,"三个咋的"));
+        iData.add(new ItemCourse(R.drawable.border_gray,"一四个"));
+        iData.add(new ItemCourse(R.drawable.border_gray,"一直四个"));
+        iData.add(new ItemCourse(R.drawable.border_gray,"一个咋的"));
+        iData.add(new ItemCourse(R.drawable.border_gray,"二是四个"));
+        iData.add(new ItemCourse(R.drawable.border_gray,"二直四个"));
+        iData.add(new ItemCourse(R.drawable.border_gray,"三个咋的"));
+        iData.add(new ItemCourse(R.drawable.border_gray,"大苏打四个"));
+        iData.add(new ItemCourse(R.drawable.border_gray,"东城大道"));
+        iData.add(new ItemCourse(R.drawable.border_gray,"哒哒哒的"));
         //适配器
-        courseAdapter = new GridAdapter(this,);
+        courseAdapter = new MyAdapter<ItemCourse>(iData,R.layout.item_course_content)
+        {
+            @Override
+            public void bindView(ViewHolder holder, ItemCourse obj) {
+                holder.setImageResource(R.id.item_img,obj.getItemId());
+                holder.setText(R.id.item_text,obj.getItemName());
+            }
+        };
+        gridView.setAdapter(courseAdapter);
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int postion, long l) {
+
+                Toast.makeText(courseContext,"你点击了"+(postion+1)+"项",Toast.LENGTH_SHORT).show();
+            }
+        });
+
         return view;
     }
 }

@@ -4,13 +4,13 @@ package com.huixue.study.adapter;
  * Created by Administrator on 2016/6/15.
  * 适配器get和set方法
  */
-public class ItemCourseAdapter {
+public class ItemCourse {
     private int itemId;
     private String itemName;
-    public ItemCourseAdapter(){
+    public ItemCourse(){
 
     }
-    public ItemCourseAdapter(int itemId,String itemName){
+    public ItemCourse(int itemId, String itemName){
         this.itemId = itemId;
         this.itemName = itemName;
     }

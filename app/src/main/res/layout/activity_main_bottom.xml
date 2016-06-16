@@ -20,7 +20,7 @@
         <RadioButton
             android:id="@+id/main_home_radioBtn"
             android:layout_width="wrap_content"
-            android:layout_height="75dp"
+            android:layout_height="wrap_content"
             android:gravity="center_horizontal|bottom"
             android:text="@string/tab_bottom_home"
             android:drawableTop="@drawable/bottom_home_img"
@@ -31,7 +31,7 @@
         <RadioButton
             android:id="@+id/main_allcourse_radioBtn"
             android:layout_width="wrap_content"
-            android:layout_height="75dp"
+            android:layout_height="wrap_content"
             android:gravity="center_horizontal|bottom"
             android:text="@string/tab_bottom_allcourse"
             android:drawableTop="@drawable/bottom_allcourse"
@@ -41,7 +41,7 @@
         <RadioButton
             android:id="@+id/main_mystudy_radioBtn"
             android:layout_width="wrap_content"
-            android:layout_height="75dp"
+            android:layout_height="wrap_content"
             android:gravity="center_horizontal|bottom"
             android:text="@string/tab_bottom_mystudy"
             android:drawableTop="@drawable/bottom_mystudy"
@@ -53,7 +53,7 @@
         <RadioButton
             android:id="@+id/main_account_radioBtn"
             android:layout_width="wrap_content"
-            android:layout_height="75dp"
+            android:layout_height="wrap_content"
             android:gravity="center_horizontal|bottom"
             android:text="@string/tab_bottom_account"
             android:drawableTop="@drawable/bottom_account"

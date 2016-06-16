@@ -18,12 +18,11 @@
         >
 
     </android.support.v4.view.ViewPager>
-
     <!--底部导航栏相对布局 开始-->
    <LinearLayout
        android:id="@+id/bottom_layout"
        android:layout_width="match_parent"
-       android:layout_height="80dp"
+       android:layout_height="70dp"
        android:layout_alignParentBottom="true"
        >
        <!--底部导航在相对布局下，建立一个水平方向上的线性布局-->
