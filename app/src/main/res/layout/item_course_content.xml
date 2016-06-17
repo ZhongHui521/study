@@ -3,8 +3,6 @@
     android:layout_width="100dp"
     android:layout_height="50dp"
     android:background="@drawable/grid_item_selector"
-    android:layout_marginRight="10dp"
-    android:layout_marginLeft="10dp"
     android:descendantFocusability="blocksDescendants"
     >
     <ImageView
@@ -22,7 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="哈哈哈哈"
-        android:textSize="18sp"
+        android:textSize="14sp"
         android:textColor="@drawable/item_color"
         android:layout_toRightOf="@+id/item_img"
         android:layout_centerVertical="true"/>
