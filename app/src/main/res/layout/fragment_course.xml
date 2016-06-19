@@ -189,6 +189,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
+                    android:paddingRight="20dp"
                     android:orientation="horizontal"
                     >
                     <ImageView
@@ -210,7 +211,6 @@
                 <!--职场技能GridView-->
                 <GridView
                     android:id="@+id/grid_course_kill"
-
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:drawSelectorOnTop="false"

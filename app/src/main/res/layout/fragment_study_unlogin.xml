@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:icon="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/course_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <!--绿色背景框+logo，提示未登录文字信息-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="vertical"
+        android:background="#ff2cc17b">
+        <!--背景logo-->
+        <ImageView
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/ic_launcher"
+            android:background="@drawable/ic_study_logo_cirle"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_marginTop="30dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="您尚未登录\n无法记录和同步学习进度，建议登录后在学习"
+            android:maxLines="2"
+            android:textColor="#fff"
+            android:textAlignment="center"
+            android:layout_marginTop="30dp" />
+
+
+    </LinearLayout>
+    <!--网易邮箱登录按钮-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="网易邮箱账号登录"
+            android:textColor="@color/colorMainGreen"
+            android:background="@drawable/ic_study_login_btn"
+
+            />
+    </LinearLayout>
+    <!--三个第三方登录入口按钮-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="新浪微博"
+            android:textSize="18sp"
+            android:layout_weight="1"
+            android:textAlignment="center"
+
+            />
+
+        <View
+            android:layout_width="1dp"
+            android:background="@color/colorDiv"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="腾讯QQ"
+            android:textSize="18sp"
+            android:layout_weight="1"
+            android:textAlignment="center" />
+
+        <View
+            android:layout_width="1dp"
+            android:background="@color/colorDiv"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="人人网"
+            android:textAlignment="center"
+            android:textSize="18sp"
+
+            android:layout_weight="1" />
+    </LinearLayout>
+    <!--分割线-->
+    <View
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorDiv"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        />
+    <!--没有账号去注册链接-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="没有账号,去注册" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:src="@mipmap/icon_arrow" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:icon="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/course_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical"
+    >
+    <!--登录云课堂按钮布局-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccoutTop">
+        <!--登录云课堂按钮-->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="登录云课堂"
+            android:textSize="18sp"
+            android:background="#fff"
+            android:layout_margin="20dp" />
+    </LinearLayout>
+    <!--三个列表布局-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="我的购物车"
+            android:textSize="20sp"
+            android:gravity="center_vertical" />
+        <!--分割线-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorDiv"
+            android:layout_gravity="center_vertical" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="意见反馈"
+            android:textSize="20sp"
+            android:gravity="center_vertical" />
+        <!--分割线-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorDiv"
+            android:layout_gravity="center_vertical" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="设置"
+            android:textSize="20sp"
+            android:gravity="center_vertical" />
+        <!--分割线-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorDiv"
+            android:layout_gravity="center_vertical" />
+    </LinearLayout>
+</LinearLayout>
