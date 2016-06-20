@@ -56,30 +56,30 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="10dp"
+                android:padding="5dp"
                 android:text="UI设计师"
                 android:textColor="#6563b1"
                 android:textColorLink="#08f"
-                android:textSize="22sp"
+                android:textSize="14sp"
                 />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="10dp"
+                android:padding="5dp"
                 android:text="产品经理"
                 android:textColor="#6563b1"
                 android:textColorLink="#08f"
-                android:textSize="22sp"
+                android:textSize="14sp"
                 />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="10dp"
+                android:padding="5dp"
                 android:textColor="#6563b1"
                 android:text="测试工程师"
                 android:autoLink="all"
                 android:textColorLink="#08f"
-                android:textSize="22sp"
+                android:textSize="14sp"
                 />
         </LinearLayout>
         <!--分类布局-->
